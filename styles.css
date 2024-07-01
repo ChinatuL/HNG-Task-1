@@ -1,0 +1,153 @@
+:root {
+    --clr-yellow: #e4ae2d;
+    --clr-yellow2: #ffc131;
+    --clr-black: #111111;
+    --clr-yellow-secondary: #eabf5f;
+    --clr-white: #fefefe;
+    --font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    font-family: var(--font-family);
+}
+
+a {
+  color: var(--clr-black);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 6rem;
+    background-color: var(--clr-black);
+    color: var(--clr-yellow);
+}
+
+.heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.section-profile {
+    background-color: var(--clr-black);
+    color: var(--clr-yellow);
+    padding: 1rem 6rem;
+}
+
+.section-profile .section-content {
+    display: flex;
+    align-items: flex-end;
+    gap: 3rem;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile-name,
+.profile-email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-goals {
+    padding: 1rem 6rem;
+}
+
+.section-goals .section-title {
+    color: var(--clr-yellow);
+    font-weight: 600;
+}
+
+.section-goals .section-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-goals .section-content > div {
+    width: 50%;
+}
+
+.section-goals .section-content > ul {
+    align-self: flex-end;
+    width: 50%;
+}
+
+.section-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.section-content ul li {
+    list-style-type: square;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.footer:last-child {
+  display: flex;
+}
+
+@media(max-width: 768px) {
+    .header {
+        padding: 0.5rem 2rem;
+    }
+
+    .section-profile {
+        padding: 1rem 2rem;
+    }
+
+    .section-goals {
+        padding: 1rem 2rem;
+    }
+
+    .section-goals .section-content > div,
+    .section-goals .section-content > ul {
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px) {
+  .section-profile .section-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
